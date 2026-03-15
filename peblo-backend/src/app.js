@@ -10,6 +10,8 @@ const app = express();
 
 app.use(cors());
 app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
 app.use("/api", ingestRoutes);
 app.use("/api", quizRoutes);
 app.use("/api", studentQuizRoutes);

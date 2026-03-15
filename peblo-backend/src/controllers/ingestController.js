@@ -26,9 +26,10 @@ const ingestPDF = async (req, res) => {
     });
 
     const filePath = path.join("uploads", req.file.filename);
+    console.log(filePath);
 
     const rawText = await extractTextFromPDF(filePath);
-
+    console.log(rawText);
 
     const cleanedText = cleanText(rawText);
 
